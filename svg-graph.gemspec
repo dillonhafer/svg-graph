@@ -5,11 +5,9 @@
 # setup of the dev toolchain including rake and juwelier will be done at a later stage.
 
 
-require_relative 'lib/svggraph'
-
 Gem::Specification.new do |s|
   s.name = %q{svg-graph}
-  s.version = SVG::Graph::VERSION
+  s.version = "2.2.2"
 
   #s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = [%q{Sean Russell}, %q{Claudio Bustos}, %q{Liehann Loots}, %q{Piergiuliano Bossi}, %q{Manuel Widmer}]
@@ -37,6 +35,7 @@ the Perl original at all.
     "README.txt",
     "README.md",
     "Rakefile",
+    "svg-graph.gemspec",
     "lib/SVG/Graph/Bar.rb",
     "lib/SVG/Graph/BarBase.rb",
     "lib/SVG/Graph/BarHorizontal.rb",
@@ -52,7 +51,7 @@ the Perl original at all.
     "lib/svggraph.rb",
     "test/test_svg_graph.rb"
   ]
-  s.homepage = %q{https://github.com/lumean/svg-graph2}
+  s.homepage = %q{https://github.com/dillonhafer/svg-graph2}
   s.licenses = [%q{GPL-2.0}]
   s.require_paths = [%q{lib}]
   #s.rubyforge_project = %q{ruby-statsample}
@@ -68,7 +67,7 @@ the Perl original at all.
   #    s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
   #  end
   #else
-  #  s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
+   s.add_runtime_dependency 'rexml', ['~> 3.2', '>= 3.2.5']
   #end
 end
 
